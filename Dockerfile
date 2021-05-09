@@ -31,13 +31,13 @@ ADD shutdown.sh /app/shutdown.sh
 ADD update_check.sh /app/update_check.sh
 
 # Fix permissions
-RUN chown -R 1000:1000 \
+RUN chown -R 901:901 \
     /steamcmd \
     /app
 
 # Run as a non-root user by default
-ENV PGID 1000
-ENV PUID 1000
+ENV PGID 901
+ENV PUID 901
 
 # Expose necessary ports
 EXPOSE 26900/tcp
